@@ -13,6 +13,7 @@ let displayMines = true;
 function createTable() {
   
     grid.innerHTML="";
+    document.body.className = '';
 
     let _qRow = Number(qRow.value);
     let _qCol  = Number(qCol.value);
@@ -65,6 +66,23 @@ function createTable() {
         $('.error').show();
     }
 
+    //disable right click on board
+    $('#tableroBM').mousedown(function(e){
+        if(e.which == 3){
+            $(this).bind("contextmenu",function(e){
+                return false;
+            });
+        }
+    })
+
+    //win/lose
+    let win = localStorage.getItem('victory');
+    let def = localStorage.getItem('defeat');
+    if(win == ''){ win = 0; }
+    if(def == ''){ def = 0; }
+    $('#vic').text(win);
+    $('#def').text(def);
+
 }
 
 createTable();
@@ -108,6 +126,14 @@ function checkLevelCompletion(_qRow,_qCol) {
     if (levelComplete) {
         document.body.classList.add("victory");
         revealMines(_qRow,_qCol);
+        let qty = localStorage.getItem('victory');
+        if(qty == ''){
+            qty = 1;
+        } else {
+            qty++;
+        }
+        $('#vic').text(qty);
+        localStorage.setItem('victory', qty);
     }
 }
 
@@ -116,6 +142,16 @@ function clickCell(cell,_qRow,_qCol) {
     if (cell.getAttribute("data-mine")=="true") {
         revealMines(_qRow,_qCol);
         document.body.classList.add("defeat");
+
+        let qty = localStorage.getItem('defeat');
+        if(qty == ''){
+            qty = 1;
+        } else {
+            qty++;
+        }
+        $('#def').text(qty);
+        localStorage.setItem('defeat', qty);
+
     } else {
         cell.className="clicked";
         //Count and display the number of adjacent mines

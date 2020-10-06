@@ -47,3 +47,7 @@ body {
         background: #FF0000; }
   body button {
     margin: 15px; }
+  body.victory #tableroBM {
+    border: solid 3px green; }
+  body.defeat #tableroBM {
+    border: solid 3px red; }

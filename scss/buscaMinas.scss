@@ -70,5 +70,19 @@ body {
     button {
       margin: 15px;
     }
+
+    &.victory{
+        #tableroBM{
+            border: solid 3px green;
+        }
+    }
+
+    &.defeat{
+        #tableroBM{
+            border: solid 3px red;
+        }
+    }
+
 }
+//body
   
