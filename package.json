@@ -1,0 +1,16 @@
+{
+  "name": "busca-minas",
+  "version": "1.0.0",
+  "description": "Juego Busca Minas",
+  "main": "buscaMinas.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "node-sass --watch scss/ -o css/"
+  },
+  "author": "Diego Sanchez",
+  "license": "ISC",
+  "dependencies": {
+    "jquery": "^3.5.1",
+    "node-sass": "^4.14.1"
+  }
+}

@@ -1,0 +1,49 @@
+body {
+  background: black;
+  color: #DDDDDD;
+  font-family: courier new;
+  text-align: center; }
+  body h1 {
+    text-align: center;
+    font-size: 24px; }
+  body .row {
+    display: flex;
+    margin: 10px auto 40px;
+    justify-content: center; }
+    body .row .col {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center; }
+      body .row .col h2 {
+        font-size: 14px;
+        flex: 1 0 100%; }
+      body .row .col input {
+        max-width: 60px;
+        justify-content: space-evenly;
+        margin: 0 10px; }
+      body .row .col span {
+        width: 100px;
+        margin: 0 10px;
+        height: 20px;
+        background: #fff;
+        color: #000; }
+        body .row .col span.selected {
+          background: green; }
+  body .error {
+    display: none;
+    font-size: 12px;
+    color: red; }
+  body #tableroBM {
+    margin: auto; }
+    body #tableroBM tr td {
+      border: 1px solid white;
+      background: #999999;
+      width: 16px;
+      height: 16px;
+      text-align: center; }
+      body #tableroBM tr td.clicked {
+        background: #333333; }
+      body #tableroBM tr td.mine {
+        background: #FF0000; }
+  body button {
+    margin: 15px; }

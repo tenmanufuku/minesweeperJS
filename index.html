@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <header>
+        <link rel="stylesheet" href="css/buscaMinas.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </header>
+    <body>
+
+        <div class="row">
+            <div class="col">
+                <h2>set game parameters</h2>
+                <input type="number" placeholder="Row" id="tableRow">
+                <input type="number" placeholder="Columns" id="tableCol">
+                <input type="number" placeholder="Mines" id="mineQty">
+            </div>
+            <div class="col">
+                <h2>set game difficulty</h2>
+                <span id="easy" class="difSelect">easy</span>
+                <span id="med" class="difSelect">medium</span>
+                <span id="hard" class="difSelect">hard</span>
+            </div>
+        </div>
+
+        <p class="error">Llene todos los campos o seleccione una dificultad</p>
+
+        <button onclick="createTable();">New Game</button>
+
+        <table id="tableroBM">
+        </table>
+
+
+    </body>
+    <footer>
+        <script src="buscaMinas.js"></script>
+    </footer>
+</html>
